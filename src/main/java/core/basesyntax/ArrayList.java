@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 public class ArrayList<T> implements List<T> {
     private static final int DEFAULT_CAPACITY = 10;
     private static final double GROWTH_FACTOR = 1.5;
-    private Exception NullPointerException;
+    private Exception nullPointerException;
 
     private T[] elements;
     private int size;
@@ -34,7 +34,7 @@ public class ArrayList<T> implements List<T> {
     @Override
     public void addAll(List<T> list) throws Exception {
         if (list == null) {
-            throw NullPointerException;
+            throw nullPointerException;
         }
         for (int i = 0; i < list.size(); i++) {
             add(list.get(i));
