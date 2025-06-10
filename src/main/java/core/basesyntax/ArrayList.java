@@ -8,7 +8,7 @@ public class ArrayList<T> implements List<T> {
 
     private T[] elements;
     private int size;
-    private Exception NullPointerException;
+    public Exception NullPointerException;
 
     @SuppressWarnings("unchecked")
     public ArrayList() {
@@ -33,7 +33,9 @@ public class ArrayList<T> implements List<T> {
 
     @Override
     public void addAll(List<T> list) throws Exception {
-        if (list == null) throw NullPointerException;
+        if (list == null) {
+            throw NullPointerException;
+        }
         for (int i = 0; i < list.size(); i++) {
             add(list.get(i));
         }
