@@ -85,7 +85,7 @@ public class ArrayList<T> implements List<T> {
     // Helper methods
     private void ensureCapacity() {
         if (size == elements.length) {
-            int newCapacity = (int)(elements.length * GROWTH_FACTOR) + 1;
+            int newCapacity = (int)(elements.length * GROWTH_FACTOR);
             resize(newCapacity);
         }
     }
